@@ -2,51 +2,33 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class KeyHandler implements KeyListener {
-
-    public boolean upPressed, downPresed, leftPressed, rightPressed;
-
-    @Override
-    public void keyTyped(KeyEvent e) {
-
-    }
+    // Booleans to track key states (added)
+    public boolean wPressed, aPressed, sPressed, dPressed;
 
     @Override
     public void keyPressed(KeyEvent e) {
+        int code = e.getKeyCode(); // Get the keycode of the pressed key
 
-        int code = e.getKeyCode();
-
-        if (code==KeyEvent.VK_W){
-            upPressed = true;
-        }
-        if (code==KeyEvent.VK_S){
-            downPresed = true;
-        }
-        if (code==KeyEvent.VK_A){
-            leftPressed = true;
-        }
-        if (code==KeyEvent.VK_D){
-            rightPressed = true;
-        }
-
-
+        // Set boolean flags based on pressed keys (added)
+        if (code == KeyEvent.VK_W) wPressed = true; // W key
+        if (code == KeyEvent.VK_S) sPressed = true; // S key
+        if (code == KeyEvent.VK_A) aPressed = true; // A key
+        if (code == KeyEvent.VK_D) dPressed = true; // D key
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
+        int code = e.getKeyCode(); // Get the keycode of the released key
 
-        int code = e.getKeyCode();
+        // Reset boolean flags based on released keys (added)
+        if (code == KeyEvent.VK_W) wPressed = false; // W key
+        if (code == KeyEvent.VK_S) sPressed = false; // S key
+        if (code == KeyEvent.VK_A) aPressed = false; // A key
+        if (code == KeyEvent.VK_D) dPressed = false; // D key
+    }
 
-        if (code==KeyEvent.VK_W){
-            upPressed = false;
-        }
-        if (code==KeyEvent.VK_S){
-            downPresed = false;
-        }
-        if (code==KeyEvent.VK_A){
-            leftPressed = false;
-        }
-        if (code==KeyEvent.VK_D){
-            rightPressed = false;
-        }
+    @Override
+    public void keyTyped(KeyEvent e) {
+        // Not used but required to implement KeyListener
     }
 }
