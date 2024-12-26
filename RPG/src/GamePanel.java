@@ -1,8 +1,9 @@
 
 import javax.swing.JPanel;
-import javax.swing.plaf.basic.BasicTreeUI;
 
 import java.awt.*;
+import java.awt.Color;
+import java.awt.Dimension;
 
 public class GamePanel extends JPanel implements Runnable {
 
@@ -32,7 +33,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     }
 public void startGameThread(){
-        gameThread = new Thread(this);
+        gameThread = new Thread(this::startGameThread);
         gameThread.start();
 }
     @Override
