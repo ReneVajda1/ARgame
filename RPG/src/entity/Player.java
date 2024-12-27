@@ -56,7 +56,7 @@ public class Player extends Entity {
             x += speed; // Move right
         }
         spriteCounter++;
-        if (spriteCounter>10) {
+        if (spriteCounter>15) {
             if (spriteNum==1) {
                 spriteNum = 2;
             } else if (spriteNum==2) {
@@ -108,6 +108,10 @@ public class Player extends Entity {
                 }
                 break;
         }
-        g2.drawImage(image,x,y,gp.tileSize,gp.tileSize,null);
+        // CHARACTER SIZE
+        int characterWidth = (int) (gp.tileSize * 2);  // Scale width by 1.5x
+        int characterHeight = (int) (gp.tileSize * 2); // Scale height by 1.5x
+
+        g2.drawImage(image, x, y, characterWidth, characterHeight, null); // Draw with new size
     }
 }
