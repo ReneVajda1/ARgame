@@ -28,10 +28,10 @@ public class Player extends Entity {
     // this makes SPRITE IMAGES POSSIBLE
     public void getPlayerImage(){
         try {
-            up1 = ImageIO.read(getClass().getResourceAsStream("/img/stolenFront.png"));
-            up2 = ImageIO.read(getClass().getResourceAsStream("/img/stolenFrontWalk.png"));
-            down1 = ImageIO.read(getClass().getResourceAsStream("/img/stolenBack.png"));
-            down2 = ImageIO.read(getClass().getResourceAsStream("/img/stolenBackWalk.png"));
+            up1 = ImageIO.read(getClass().getResourceAsStream("/img/stolenBack.png"));
+            up2 = ImageIO.read(getClass().getResourceAsStream("/img/stolenBackWalk.png"));
+            down1 = ImageIO.read(getClass().getResourceAsStream("/img/stolenFront.png"));
+            down2 = ImageIO.read(getClass().getResourceAsStream("/img/stolenFrontWalk.png"));
             right1 = ImageIO.read(getClass().getResourceAsStream("/img/rightStolen.png"));
             right2 = ImageIO.read(getClass().getResourceAsStream("/img/rightStolenWalk.png"));
             left1 = ImageIO.read(getClass().getResourceAsStream("/img/leftStolen.png"));
