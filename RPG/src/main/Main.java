@@ -1,3 +1,5 @@
+package main;
+
 import javax.swing.JFrame;
 
 public class Main {
@@ -9,7 +11,7 @@ public class Main {
 
         GamePanel gamePanel = new GamePanel(); // Create the game panel
         window.add(gamePanel); // Add game panel to the window
-        window.pack(); // Ensure JFrame sizes to fit GamePanel
+        window.pack(); // Ensure JFrame sizes to fit main.GamePanel
         window.setLocationRelativeTo(null); // Center window on screen
         window.setVisible(true); // Make the window visible
 
